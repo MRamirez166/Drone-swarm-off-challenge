@@ -58,11 +58,16 @@ def loop():
     drone.set_pitch(-100)
     drone.move(1.5)
     drone.land()
-
     drone.close()
 
 def 
 
+def hover():
+    drone.pair()
+    drone.takeoff()
+    drone.hover(3)
+    drone.land()
+    drone.close()
 while True:
     user_input = input("What would you like to do?")
     if user_input == "Figure 8":
@@ -73,3 +78,5 @@ while True:
         loop()
     elif user_input == "Spiral":
         spiral()
+    elif user_input == "Hover":
+        hover()
