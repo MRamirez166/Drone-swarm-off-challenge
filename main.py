@@ -61,6 +61,7 @@ def loop():
 
     drone.close()
 
+def 
 
 while True:
     user_input = input("What would you like to do?")
