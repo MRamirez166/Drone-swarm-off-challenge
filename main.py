@@ -1,3 +1,7 @@
+# main.py
+# desc: A program for a drone swarm off
+# authors: Martin Ramirez, Naimur Abir, Eric Tavarez, Alejandro Bautista, Connor McGonigal
+# created: 01/09/2024
 from codrone_edu.drone import *
 
 drone = Drone()
@@ -60,7 +64,6 @@ def loop():
     drone.land()
     drone.close()
 
-def 
 
 def hover():
     drone.pair()
@@ -68,6 +71,15 @@ def hover():
     drone.hover(3)
     drone.land()
     drone.close()
+
+def xcoo():
+    drone = Drone()
+    drone.pair()
+    drone.takeoff()
+    print(drone.get_pos_y())
+    drone.land()
+    drone.close()
+
 while True:
     user_input = input("What would you like to do?")
     if user_input == "Figure 8":
@@ -80,3 +92,5 @@ while True:
         spiral()
     elif user_input == "Hover":
         hover()
+    elif user_input == "xcoo":
+        xcoo()
