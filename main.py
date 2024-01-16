@@ -1,6 +1,8 @@
 from codrone_edu.drone import *
-
+from speech_to_text import *
 drone = Drone()
+
+return_voice()
 
 
 def straight_line():
