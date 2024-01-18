@@ -50,6 +50,25 @@ def figure_8():
     drone.land()
     drone.close()
 
+#SMALLER FIGURE EIGHT
+def figure_eight():
+    drone.pair()
+    drone.takeoff()
+    drone.set_yaw(70)
+    drone.set_pitch(50)
+    drone.move(1.5)
+    drone.set_yaw(-100)
+    drone.move(3)
+    drone.set_yaw(100)
+    drone.move(2)
+    drone.set_yaw(50)
+    drone.move(1.5)
+    drone.set_yaw(-100)
+    drone.move(3)
+    drone.set_yaw(100)
+    drone.move(2)
+    drone.land()
+    drone.close()
 
 def loop():
     drone.pair()
@@ -94,3 +113,5 @@ while True:
         hover()
     elif user_input == "xcoo":
         xcoo()
+    elif user_input == "eight":
+        figure_eight()
